@@ -6,7 +6,6 @@ Created on Thu Mar  5 13:52:06 2020
 """
 import smtplib
 import config
-import random
 
 def send_email(subject,msg):
     email = input("enter sender's email")
@@ -22,12 +21,9 @@ def send_email(subject,msg):
     except :
         print("email failed")
 
+subject = "Sample Subject"
 
-m=random.randint(1000,10000)        
-subject = "test2 subject"
-msg = str(m) 
-
-send_email(subject, msg)        
+send_email(subject, "Type your message")        
         
         
         
