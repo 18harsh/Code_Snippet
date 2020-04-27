@@ -1,19 +1,22 @@
-
 # -*- coding: utf-8 -*-
 """
 Created on Thu Mar  5 13:52:06 2020
-
 @author: Harsh
 """
 import smtplib
 import config
-import random
 
 def send_email(subject,msg):
     email = input("enter sender's email")
     try:
         server = smtplib.SMTP("smtp.gmail.com:587")
-        server.ehlo()
+        #Gmail smtp.gmail.com
+        # Outlook.com/Hotmail.com smtp-mail.outlook.com
+        # Yahoo Mail smtp.mail.yahoo.com
+        # AT&T smpt.mail.att.net (port 465)
+        # Comcast smtp.comcast.net
+        # Verizon smtp.verizon.net (port 465)
+        server.ehlo()#start connection
         server.starttls()
         server.login(config.email_address,config.password)
         message = 'Subject: {}\n\n{}'.format(subject,msg)
@@ -23,13 +26,6 @@ def send_email(subject,msg):
     except :
         print("email failed")
 
+subject = "Sample Subject"
 
-m=random.randint(1000,10000)        
-subject = "test2 subject"
-msg = str(m) 
-
-send_email(subject, msg)        
-        
-        
-        
-        
+send_email(subject, "Type your message") 
