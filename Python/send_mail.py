@@ -11,7 +11,7 @@ def send_email(subject,msg):
     email = input("enter sender's email")
     try:
         server = smtplib.SMTP("smtp.gmail.com:587")
-        server.ehlo()
+        server.ehlo()#start connection
         server.starttls()
         server.login(config.email_address,config.password)
         message = 'Subject: {}\n\n{}'.format(subject,msg)
