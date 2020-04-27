@@ -11,7 +11,7 @@ Verizon incoming.verizon.net
 
 """
 
-conn.login('brucewayne18112000@gmail.com','pfvatzktlfxjaxeo')
+conn.login('************','***********')
 conn.select_folder('INBOX',readonly=True)
 UIDs = conn.search(['SINCE' ,'05-Apr-2019'])
 # print(UIDs)
