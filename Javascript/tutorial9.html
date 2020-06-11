@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string</title>
+</head>
+<body>
+<h1 id="header">Hello</h1>
+<input type="text" id="inp">
+<button onclick="pressed()">Click</button>
+<p id="output"></p>
+<script type="text/javascript">
+	function pressed(){
+		var text = document.getElementById("inp").value;
+		output.innerHTML = text.toUpperCase()+
+		text.toLowerCase()+
+		text.endsWith("h")+
+		text.trim()+
+		text.length;
+		
+		}
+</script>
+</body>
+</html>

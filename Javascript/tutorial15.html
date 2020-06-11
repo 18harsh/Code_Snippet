@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Maps</title>
+</head>
+<body>
+<script type="text/javascript">
+	var mp = new Map(
+		[
+		["t",5],
+		["v",4]
+		])
+	mp.set("t",9)
+	console.log(mp.get("t"))
+	for (var entry of mp){
+		console.log(entry[0])
+	}
+	mp.clear()
+</script>
+</body>
+</html>
